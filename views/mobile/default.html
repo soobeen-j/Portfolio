@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <!-- common -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- SEO : search engine optimization -->
+    <meta name="description" content="퍼블리셔 정수빈의 포트폴리오입니다.">
+    <meta name="keywords" content="웹디자이너 포트폴리오, 웹디포폴, 디자이너 포트폴리오, 퍼블리셔 포트폴리오, 퍼블리셔 포폴, 마크업 포트폴리오">
+    <meta name="author" content="SubinJ">
+
+    <!-- OG : opengraph -->
+    <meta property="og:title" content="정수빈 포트폴리오.">
+    <meta property="og:description" content="퍼블리셔 정수빈의 포트폴리오입니다.">
+    <meta property="og:image" content="공유이미지 800x400">
+
+    <!-- theme, favicon -->
+	<link rel="manifest" href="/frontend/assets/images/favicon/manifest.json">
+    <link rel="shortcut icon" type="image/x-icon" href="/frontend/assets/images/favicon/favicon.ico">
+
+    <!-- title -->
+    <title>Apple Pay</title>
+
+    <!-- CSS -->
+	<link rel="stylesheet" href="/frontend/assets/css/font.css">
+	<link rel="stylesheet" href="/frontend/assets/css/reset.css">
+	<link rel="stylesheet" href="/frontend/views/mobile/common/css/default.css" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+	<link href="https://swiperjs.com/package/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Javascript -->
+    <script src="/frontend/assets/js/jquery-3.4.1.min.js"></script>
+    <script src="/frontend/assets/js/prefixfree.min.js"></script>
+	<script src="/frontend/assets/js/aos.js"></script>
+	<script src="/frontend/assets/js/swiper-bundle.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+
+<body>
+	<header>
+		<div class="header">
+			<div class="menu">
+				<span class="m_bullet"></span>
+				<span class="m_bullet"></span>
+				<span class="m_bullet"></span>
+				<span class="m_bullet"></span>
+				<span class="m_bullet"></span>
+			</div>
+		
+			<div class="menu-box">
+				<nav>
+					<ul>
+						<li>Apple Pay</li>
+						<li>Wallet</li>
+						<li>Public Transit</li>
+						<li>Payment</li>
+					</ul>
+				</nav>
+			</div>
+		
+			<span class="icon-pay">icon</span>
+		
+			<script>
+				$(function(){
+					
+					function tween01(){ //트윈맥스 메뉴효과
+						TweenMax.staggerFromTo('.menu-box li', 0.4,
+						  {
+							opacity:0,
+							y:-50,
+							x:-50,
+						  },
+						  {
+							 opacity:1,
+							 y:0,
+							 x:0,
+						  },
+						  0.3
+						);
+					}
+
+					function reset(){
+						TweenMax.killAll(); //트윈맥스 효과 없애기
+					}
+
+					$('.menu').click(function(){
+						if($(this).hasClass('on')){
+							$(this).removeClass('on')
+							$('.menu-box').removeClass('on')
+							reset();
+						}else{
+							$(this).addClass('on')
+							$('.menu-box').addClass('on')
+							tween01();
+						}
+					})
+				})
+			</script>
+		
+		</div>
+	</header>
+
+	<section class="main">
+		<h2 data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="3000">애플을 위한<br> 최초의 페이 탄생</h2>
+		<div class="mobile">핸드폰 이미지</div>
+		<div class="card" data-aos="fade-right" data-aos-duration="3000">카드 이미지</div>
+	</section>
+	<script>
+	  AOS.init();
+	</script>
+
+	<section class="payWay"><!-- dark -->
+		<h3>돈을 주고 받는<br> 가장 쉬운 방법</h3>
+		<ul class="tab-list">
+			<li class="on">Apple Watch</li>
+			<li>Mac</li>
+			<li>iPhone</li>
+		</ul>
+		<script>
+			$(function(){
+				$('.tab-list > li').click(function(){
+
+					$('.tab-list > li').removeClass('on')
+					$(this).addClass('on')
+					
+					idx = $(this).index()
+					$('.tab-cont > div').removeClass('on')
+					$('#tap'+idx).addClass('on')
+
+					if($(this).index() == 1){
+						$('.payWay').addClass('dark');
+					}else{
+						$('.payWay').removeClass('dark');
+					}
+				})
+			})
+		</script>
+		<div class="tab-cont">
+			<div class="cont1 on" id="tap0">
+				<div class="inner">
+					<div class="sliding-text sliding-text01">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide"><span>오늘 먹은 <i class="em em-pizza" aria-role="presentation" aria-label="PIZZA"></i><i class="em em-beer" aria-role="presentation" aria-label="BEER MUG"></i></span></li>
+							<li class="swiper-slide"><span>급하게 엄마에게</span></li>
+							<li class="swiper-slide"><span>친구의 생일선물을</span></li>
+						</ul>
+					</div>
+					
+					<div class="wrap-watch ">
+						<div class="screen sliding-screen">
+							<div class="swiper-wrapper">
+								<figure class="screen-item pic1 swiper-slide"></figure>
+								<figure class="screen-item pic2 swiper-slide"></figure>
+								<figure class="screen-item pic3 swiper-slide"></figure>
+							</div>
+						</div>
+						<div class="frame">
+						</div>
+					</div>
+					
+					<div class="sliding-text sliding-text02">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide"><span>바로 더치페이 할 때</span></li>
+							<li class="swiper-slide"><span>돈을 빌릴 때<i class="em em-pray" aria-role="presentation" aria-label="PERSON WITH FOLDED HANDS"></i></span></li>
+							<li class="swiper-slide"><span>지금 보낼 때</span></li>
+						</ul>
+					</div>
+				</div>
+				<script>
+					var mySwiper1 = new Swiper('.sliding-text01', {
+					  // Optional parameters
+					  direction: 'vertical',
+					  loop: true,
+					  autoplay: {
+						delay: 2500,
+						disableOnInteraction: false,
+					  },
+					  simulateTouch:false,
+					})
+
+					var mySwiper2 = new Swiper('.sliding-screen', {
+					  // Optional parameters
+					  direction: 'vertical',
+					  loop: true,
+					})
+
+					var mySwiper3 = new Swiper('.sliding-text02', {
+					  // Optional parameters
+					  direction: 'vertical',
+					  loop: true,
+					  simulateTouch:false,
+					})
+
+					mySwiper1.controller.control = mySwiper2;
+					mySwiper1.controller.control = mySwiper3;
+
+					mySwiper2.controller.control = mySwiper1;
+					mySwiper2.controller.control = mySwiper3;
+
+					mySwiper3.controller.control = mySwiper1;
+					mySwiper3.controller.control = mySwiper2;
+				</script>
+			</div>
+			<div class="cont2" id="tap1">
+				<div class="inner">
+					<h3>사파리에서 물건을 사시나요?</h3>
+					<p>계좌를 만들거나 긴 정보를 입력할 필요 없이 Touch ID로 Macbook Air와 Macbook Pro에서 더 간편하고 안전하게 결제하세요.</p>
+					<figure class="img-web"data-aos="fade-right" data-aos-duration="3000"></figure>
+				</div>
+			</div>
+			<div class="cont3" id="tap2">
+				<div class="inner">
+					<h3>메세지를 보내는 것 만큼이나 쉬운 송금</h3>
+					<p>손가락으로 터치하거나 Siri에게 요청하세요. 메세지에서 바로 돈을 보내거나 받을 수 있고,
+					앱을 다운로드 할 필요도 없답니다. Wallet 속에 있는 카드를 바로 사용하세요.</p>
+					<div class="chat">
+						<ul>
+							<li class="txt-gray"><span>안녕하세요. 문의주신 원데이클래스<br> 가격은 3만원입니다.</span></li>
+							<li class="txt-blue"><span class="txt-pay"><figure></figure><strong>30,000 원</strong></span></li>
+							<li class="txt-blue"><span>너무 기대되네요!</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- payWay -->
+	<section class="traffic">
+		<h3>버스와 기차를<br> 탈 때도 가볍게!</h3>
+		<p>iPhone, Apple Watch와 함께하는<br> 가벼운 출근길</p>
+		<div class="transit">
+			<!-- <figure data-aos="fade-up"></figure> -->
+			<div class="swiper-container transit_slide">
+				<div class="swiper-wrapper">
+				  <div class="swiper-slide"><img src="/frontend/views/mobile/img/phone_transit.jpg" alt=""></div>
+				  <div class="swiper-slide"><img src="/frontend/views/mobile/img/phone_transit.jpg" alt=""></div>
+				  <div class="swiper-slide"><img src="/frontend/views/mobile/img/phone_transit.jpg" alt=""></div>
+			
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			  </div>
+		</div>
+	</section><!-- traffic -->
+
+		<script>
+			/*
+			var swiper = new Swiper('.swiper-container.transit_slide', {
+				  pagination: {
+					el: '.transit_slide .swiper-pagination',
+				  },
+				  on:{
+					touchStart:function(){
+						$('.transit_slide .swiper-slide').addClass('on')
+					},
+					touchEnd:function(){
+						$('.transit_slide .swiper-slide').removeClass('on')
+					}
+				  }
+			});
+			*/
+
+			var swiper = new Swiper('.swiper-container.transit_slide', {
+					slidesPerView:1.3,
+					centeredSlides: true,
+					loop:true,
+				  pagination: {
+					el: '.transit_slide .swiper-pagination',
+				  },
+				  on:{
+					touchStart:function(){
+						$('.transit_slide .swiper-slide').addClass('on')
+					},
+					touchEnd:function(){
+						$('.transit_slide .swiper-slide').removeClass('on')
+					}
+				  }
+			});
+	  </script>
+
+	<section class="payHow">
+		<h3>결제를 하거나 현금을 쓸 때,<br>언제든 Apple Pay와 함께</h3>
+		<p>물건을 사고 남은 잔돈을 포함한 현금은 Wallet 앱 안에 있는 Apple Cash에 넣을 수 있어요. 또한 Apple Cash를 은행 계좌로 옮길 수도 있죠.</p>
+		<div class="sticky">
+			<div class="phone-view">
+				<figure class="screen" ></figure>
+				<figure class="frame"></figure>
+				<figure class="shadow"></figure>
+			</div>
+		</div>
+		<div class="bg-store">
+			<span class="fade fade-top"></span>
+			<div><span>어디서든<br> 탭! 하세요.</span></div>
+		</div>
+	</section><!-- payHow -->
+	<section class="privacy">
+		<dl>
+			<dt>
+				<div class="icon-faceId">
+					<p>
+						<span></span>
+						<span></span>
+					</p>
+				</div>
+				<h3>Face ID로 더 안전하게</h3>
+			</dt>
+			<dd><strong>스마트폰 사상 가장 안전한 방식.</strong> 버튼을 터치하거나 잔돈을 받을 필요 없이 더 안전하게 결제하세요. 더 빠르고 안전하게 결제할 수 있습니다. 물론 Touch ID로 결제도 가능합니다.</dd>
+		</dl>
+		<dl>
+			<dt>
+				<div class="icon-privacy"></div>
+				<h3>개인정보는 소중하니까요.</h3>
+			</dt>
+			<dd>체크카드나 신용카드를 쓸 때 Apple Pay는 거래내역을 저장하지 않습니다. Apple Cash를 사용할 때 사기방지나 규제목적으로만 정보가 저장됩니다.</dd>
+		</dl>
+	</section>
+	<section class="scroll-pay white"><!-- white -->
+		<div class="wrap-txt">
+			<div class="title-sticky">
+				<ul>
+					<li>앞</li>
+					<li>으</li>
+					<li>로</li>
+					<li>의</li>
+				</ul>
+				<div class="hide">
+					<ul>
+						<li>A</li>
+						<li>p</li>
+						<li>p</li>
+						<li>l</li>
+						<li>e</li>
+					</ul>
+				</div>
+			</div><!-- title-sticky -->
+			<div class="title-pin">
+				<ul>
+						<li>P</li>
+						<li>a</li>
+						<li>y</li>
+					</ul>
+			</div>
+		</div><!-- wrap-txt -->
+		<div class="wrap-scrollCont">
+			<div class="phone">
+				<div class="group-figure">
+					<figure class="frame-phone"></figure>
+					<figure class="screen item02"></figure>
+				</div>
+				<p>Wallet 앱으로<br> Apple Cash와 체크카드, 신용카드 모두 담을 수 있습니다. </p>
+			</div>
+			<div class="watch">
+				<div class="group-figure">
+					<figure class="frame-watch"></figure>
+					<figure class="screen item02"></figure>
+				</div>
+				<p>탑승권, 영화 티켓, 포인트 카드도 시간과 위치에 따라 보여줍니다. 공항에 도착 했을 때 탑승권이 뜨는 것 처럼요.</p>
+			</div>
+			<div class="watch">
+				<div class="group-figure">
+					<figure class="frame-watch"></figure>
+					<figure class="screen item01"></figure>
+				</div>
+				<p>복잡한 과정 없이 말만으로 송금이 되는 지갑 없는 카드생활. </p>
+			</div>
+			<div class="phone">
+				<div class="group-figure">
+					<figure class="frame-phone"></figure>
+					<figure class="screen item01"></figure>
+				</div>
+				<p>탑승권, 영화 티켓, 포인트 카드, 학생증까지도요.</p>
+			</div>
+		</div><!-- wrap-scrollCont -->
+	</section>
+	<section class="rollup-txt">
+		<div class="">
+		</div>
+	</section>
+</body>
+</html>

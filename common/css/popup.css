@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/* All */pple
+header, footer, nav, section, article, aside, figure, figcaption {display:block;}
+body, table, input, textarea, select, button {font-size:14px;}
+a img {border:0;}
+
+
+/* reset style */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, big, cite, code,
+del, dfn, em, font, img, ins, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, 
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, 
+caption, tbody, tfoot, thead, tr, th, td 
+{margin:0; padding:0; border:0; font-style:normal;}
+
+
+*, *:before, *:after {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+
+
+html {overflow-y:scroll; background-color:#eaeaea;}
+body {margin:0; padding:0; overflow-y:scroll; font-family:'AppleSDGothic'; Malgun Gothic,'맑은 고딕', sans-serif; font-size:12px; color:#666; letter-spacing:-.5px; overflow:hidden;}
+
+img, fieldset {border:none; vertical-align:middle; margin:0 !important;}
+button, label {border:none; vertical-align:middle; font-family:'AppleSDGothic'; Malgun Gothic,'맑은 고딕'; outline:0; cursor:pointer;}
+hr, button img{display:none;}
+ul, ol, li{list-style:none; margin:0; padding:0;}
+dl, dd{list-style:none; margin:0; padding:0;}
+
+
+.png24 {tmp:expression(setPng24(this));}
+
+
+a {outline:none; text-decoration:none; color:#333; select-dummy:expression(this.hideFocus=true); cursor:pointer;}
+a:hover {text-decoration:none; color:#333;}
+a:active, a:focus{text-decoration:none; color:#333;}
+
+textarea {padding:5px; width:100%; font-family:'AppleSDGothic'; Malgun Gothic,'맑은 고딕'; font-size:12px; color:#333; border:1px solid #d3d3d3; background-color:#fff; letter-spacing:-.5px; overflow:auto;}
+table {border-collapse:collapse; border:0; padding:0;}
+caption {display:none;}
+legend {position:absolute; top:0; left:0; width:0; height:0; overflow:; visibility:hidden; font-size:0; line-height:0;} /* For Screen Reader */
+select {display:inline-block; vertical-align:middle; margin:0; padding:0; height:34px; font-family:'AppleSDGothic'; Malgun Gothic,'맑은 고딕'; font-size:13px; color:#333; border:1px solid #eaeaea; letter-spacing:0;}
+
+input[type="text"], input[type="password"]				{vertical-align:middle; padding:0 10px; height:40px; font-family:Malgun Gothic,'맑은 고딕'; font-size:14px; color:#333; border:1px solid #ddd; background-color:#fff; outline:0; -moz-transition:all .3s; -webkit-transition:all .3s; -o-transition:all .3s; transition:all .3s;}
+input[type="text"]:hover, input[type="password"]:hover	{border-color:#c7c7c7;}
+input[type="text"]:focus, input[type="password"]:focus	{border-color:#EA8B92;}
+input[type="radio"], input[type="checkbox"]				{vertical-align:middle; margin:0 0 2px; padding:0; cursor:pointer;}
+input::-webkit-input-placeholder						{font-weight:normal; color:#a3a3a3;}
+input:-ms-input-placeholder								{font-weight:normal; color:#a3a3a3;}
+input::-moz-placeholder									{font-weight:normal; color:#a3a3a3;}
+input:-moz-placeholder									{font-weight:normal; color:#a3a3a3;}
+
+input[readonly]											{border-color:#ccc; background-color:#f0f0f0;}
+input[readonly]:hover,
+input[readonly]:focus									{cursor:no-drop; border-color:#ccc;}
+
+/* Layout Selector */
+.wrap														{min-width:500px;}
+.container												{margin-top:70px; vertical-align:top; background-color:#fff;}
+.header													{position:fixed; top:0; left:0; z-index:9999; display:table; width:100%; background-color:#ffffff;}
+.header	span										{display:table-cell; height:70px; padding-left:20px; vertical-align:middle; font-family:'AppleSDGothic'; font-weight:400; font-size:20px; color:#000000;}
+.header	span b									{margin-left:10px; font-size:14px; font-weight:normal;}
+.header > a											{position:absolute; top:50%; right:10px; width:50px; height:50px; transform:translateY(-50%); background:url(../../images/icon/close.png) no-repeat; background-size:100% 100%; text-indent:-9999px; cursor:pointer;}
+
+/* 랜딩페이지 */
+.container .landing								{width:100%; max-width:1280px; margin:0 auto;}
+.container .landing img						{width:100%;}
+	
